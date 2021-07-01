@@ -1,0 +1,603 @@
+// These are projects i have created during my learning at codecademy using Java.
+
+// Define your tree class in this file!
+public class Tree {
+  
+  public static void main (String[]args) {
+    //hi and plant tree//
+    System.out.println("Hello I am Tracey");
+    System.out.println(" Our project goal");
+    System.out.println("   *   ");
+    System.out.println("  ***     ");
+    System.out.println("  ***     ");
+    System.out.println("   *  ");
+    System.out.println("   *  ");
+     System.out.println("   *  ");
+
+    System.out.println("*    *  *****");
+    System.out.println("*    *    *  ");
+    System.out.println("******    *   ");
+    System.out.println("*    *    *   ");
+    System.out.println("*    *  *****");
+}
+}
+
+//a program to create a story by use of words impleented by user
+public class MadLibs {
+  /*this program should generate  a mad libbed story
+  Your description here
+  */
+  	public static void main(String[] args){
+      
+      String name1 = "mum";
+       
+      String adjective1 ="went";
+      String adjective2 = "cook";
+      String adjective3 = "gone";
+      String verb1 = "quickly";
+      String noun1 = "food";
+      String noun2 ="hungry";
+      String noun3 ="pekish";
+      String noun4 = "sleppy";
+      String noun5 = "bored";
+      String noun6 ="yawny";
+     
+      String name2 = " Coco ";
+      int number = (77);
+      String place1 = " kitchen ";
+
+      //The template for the story
+      String story = "This morning "+name1+" woke up feeling "+adjective1+". 'It is going to be a "+adjective2+" day!' Outside, a bunch of "+noun1+"s were protesting to keep "+noun2+" in stores. They began to "+verb1+" to the rhythm of the "+noun3+", which made all the "+noun4+"s very "+adjective3+". Concerned, "+name1+" texted "+name2+", who flew "+name1+" to "+place1+" and dropped "+name1+" in a puddle of frozen "+noun5+". "+name1+" woke up in the year "+number+", in a world where "+noun6+"s ruled the world.";
+     System.out.println(story);
+    }       
+}
+
+
+//Math Magic end number always same no matter what myNumber is
+public class Magic {
+	public static void main(String[] args) {
+int myNumber = 98 ;
+//my number is known as original number
+		int stepOne = (myNumber * myNumber);
+    int stepTwo = (stepOne + myNumber);
+ int stepThree = (stepTwo/myNumber);
+ int stepFour = (stepThree +17);
+ int stepFive =(stepFour - myNumber);
+ int stepSix = (stepFive/6);
+ System.out.println(stepOne);
+ System.out.println(stepTwo);
+ System.out.println(stepThree);
+ System.out.println(stepFour);
+ System.out.println(stepFive);
+ System.out.println(stepSix);
+	}
+}
+
+
+// a simple maths calculator you can change values at the bottom
+//eventually i will be wanting to expand on this project to build a fully functioning calculator
+public class Calculator {
+  public Calculator() {
+  }
+  public int add(int a, int b) {
+  return a + b ;
+};
+public int subtract(int c,int d) {
+ return  c - d;
+};
+  public int multiply(int e,int f) {
+   return  e * f;
+  };
+  public int divide(int g,int h) {
+    return g / h;  
+  };
+    public int modulo(int i,int j) {
+     return i % j;
+    };
+
+public static void main (String[]args) {
+Calculator myCalculator = new Calculator(); 
+System.out.println(myCalculator.add(5,7));
+System.out.println(myCalculator.subtract(45,11));
+System.out.println(myCalculator.multiply(6,5));
+System.out.println(myCalculator.divide(500,10));
+System.out.println(myCalculator.modulo(49,2));
+ }     
+}
+
+
+//build a droid project
+// this is slightly altered to show a battery report after task is complete
+public class Droid {
+String name;
+int batteryLevel;
+
+public Droid(String droidName) {
+  name = droidName;
+  batteryLevel =100;
+}
+public void performTask(String task) {
+
+ batteryLevel = batteryLevel - 10;
+ System.out.println(name + " is performing the task " + task  +" ," + batteryLevel + " is my power level.");
+}
+public String toString() {
+  return "hello i am the droid " + name;
+}
+public void batteryReport(String report) {
+  if(batteryLevel >= 80){
+    System.out.println("my battery level is " + batteryLevel + " i am raring to do tasks for you");
+  } else if (batteryLevel >= 40 &&(batteryLevel <80)){
+    System.out.println("my battery level is " + batteryLevel + " i can do a few more tasks");
+  }else {
+    System.out.println("please let me recharge  " + batteryLevel);
+  }
+//return batteryReport;
+}
+  public static void main(String[] args) { 
+
+ Droid Codey = new Droid("Codey");
+ System.out.println(Codey );
+ Codey.performTask("Dancing");
+ Codey.performTask("chill for 5");
+ Codey.batteryReport("");
+  }
+}
+
+
+//simple carloan
+public class CarLoan {
+  //works out how expensive cars are a month
+public static void main(String[] args) {
+int carLoan = 10000;
+int loanLength = 3;
+int interestRate = 5;
+int downPayment = 2000;
+
+ if (loanLength <= 0) {
+ System.out.println("Error you must take out valid loan");
+} 
+else if (downPayment >= carLoan)  {
+ System.out.println("you can pay in full");
+}
+else {
+ int remainingBalance =carLoan - downPayment; 
+ int months =  loanLength *12;
+ int monthlyBalance = remainingBalance / months;
+ int interest = ( monthlyBalance * interestRate)/100;
+ int monthlyPayment = monthlyBalance + interest;
+
+System.out.println( monthlyPayment);
+}
+	}
+}
+
+
+//list largest city in continent project
+public class Continents {
+	public static void main(String[] args) {
+int continent = 4;// choose num 1 -6
+switch(continent){
+case (1):
+		System.out.println("North America: Mexico City, Mexico");
+    break;
+case (2):
+System.out.println("South America: Sao Paulo, Brazil");
+break;
+case (3):
+System.out.println("Europe: Moscow, Russia");
+break;
+case (4):
+System.out.println("Africa: Lagos, Nigeria");
+break;
+case(5):
+System.out.println("Asia: Shanghai, China");
+break;
+case (6):
+System.out.println("Australia: Sydney, Australia");
+break;
+case (7):
+System.out.println("Antartica: McMurdo Station, US");
+break;
+default:
+System.out.println("undefined continent");
+break;
+}
+	}
+}
+
+
+//FizzBuzz /3 = fizz, /5 = buzz /3&5 =fizzbuzz
+
+public class FizzBuzz {
+  public static void main(String[] args) {
+ for (int i= 1; i <= 100; i++){
+ System.out.println(i);
+  //FizzBuzz(i) = int i;
+ if ((i % 3 == 0) && (i % 5 == 0)) {
+ System.out.println( i +  " FizzBuzz ");
+ }
+ else if (i % 3 == 0) {
+   System.out.println( i + " Fizz");
+ }
+  else if (i % 5 == 0) {
+   System.out.println( i +" Buzz");
+ };
+  
+};
+};
+};
+
+
+//prime directive to find prime nums from given array
+// Import statement:
+import java.util.ArrayList;
+
+public class PrimeDirective {
+  public boolean isPrime(int number){
+    if (number ==2 ){
+    return true;
+  }else if (number <2) {
+   return false; 
+  
+  }; 
+  for(int i =2;i<number;i++){
+  if(number % i == 0){
+    return false;
+  }
+  }
+  return true;
+  }
+  public ArrayList<Integer> onlyPrimes(int[] numbers) {
+   ArrayList<Integer> primes = new ArrayList<Integer>();
+  for(int number : numbers ) {
+ if (isPrime(number)) {
+   primes.add(number);
+ 
+  }
+  }
+  return primes;
+  }
+  public static void main(String[] args) {
+
+    PrimeDirective pd = new PrimeDirective();
+    int[] numbers = {6, 29, 28, 33, 11, 100, 101, 43, 89};   
+    //System.out.println(pd.isPrime(6)); 
+    System.out.println(pd.onlyPrimes(numbers));  
+};
+  }
+
+
+  //DNA sequecing project
+  //checks dna to see if protein init
+public class DNA {
+ 
+  public static void main(String[] args) {
+ 
+    //  -. .-.   .-. .-.   .
+    //    \   \ /   \   \ / 
+    //   / \   \   / \   \  
+    //  ~   `-~ `-`   `-~ `-
+ 
+   String dna1 = "ATGCGATACGCTTGA";
+  String dna2 = "ATGCGATACGTGA";
+  String dna3 = "ATTAATATGTACTGA";
+ String dna = dna3;
+  int length = dna.length();
+  System.out.println( " Length: " + length);
+
+ int index = dna.indexOf("ATG");
+System.out.println("index:" + index);
+
+int stop = dna.indexOf("TGA");
+System.out.println("stop" + stop);
+
+if(index != -1 && stop != -1 & (stop - index)% 3 == 0 ) {
+  System.out.println("all 3 conditions are met");
+
+  String protein = dna.substring(index,stop+3);
+  System.out.println("protein:" + protein);
+}else{
+  System.out.println("no protein");
+}
+}
+}
+
+
+//language families project
+ class Language {
+   
+   protected String name; 
+   protected  Integer numSpeakers;
+   protected String regionSpoken;
+   protected String wordOrder;
+ Language (String langName, int speakers, String regions, String Order) {
+    this.name = langName;
+    this.numSpeakers = speakers;
+    this.regionSpoken = regions;
+    this.wordOrder = Order;
+  }
+    public void getInfo() {
+
+   System.out.println(this.name + " is spoken by " + this.numSpeakers + " people mainly in " + this.regionSpoken );
+System.out.println(  " The language follows the word order " + this.wordOrder + ".");
+ }
+
+  public static void main(String []args) {
+  
+ Mayan tzotzil = new Mayan("Tzotzil",404704);
+tzotzil.getInfo();
+
+ SinoTibetan mandarin   = new  SinoTibetan( "Mandarin Chinese", 10000000);
+    mandarin.getInfo();
+
+  SinoTibetan burmese = new SinoTibetan("Burmese", 320000);
+    burmese.getInfo();
+ }
+ }
+
+ 
+ //2d array manipulation
+ //pls note alot of this code was provided before i started the project
+ //there is more to be added to this code in the future
+
+ import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.net.URL;
+import java.util.Arrays;
+import java.util.Random;
+import javax.imageio.ImageIO;
+public class ImageProcessing {
+	public static void main(String[] args) {
+    // The provided images are apple.jpg, flower.jpg, and kitten.jpg
+		int[][] imageData = imgToTwoD("./apple.jpg");
+    //int[][] flatten = stretchHorizontally(imageData);
+ //int[][] shrink = shrinkVertically(imageData);
+ //int[][] rev = invertImage(imageData);
+ //int[][] colFilt = colorFilter(imageData,160,-135,190);
+//int[][] blankImg = new int[400][400];
+ 
+//int[][] randomImg = paintRandomImage(blankImg);
+//twoDToImage(randomImg, "./random_image.jpg");
+int[] rgba = {255, 255, 0, 255};
+ 
+//int[][] rectangleImg = paintRectangle(randomImg, 230, 230, 190, 190, getColorIntValFromRGBA(rgba));
+//twoDToImage(rectangleImg, "./rectangle.jpg");
+
+	int[][] generatedRectangles = generateRectangles(randomImg, 100);
+
+		twoDToImage(generatedRectangles, "./generated_rect.jpg");
+    // Or load your own image using a URL!
+	//	int[][] imageData = imgToTwoD("https://content.codecademy.com/projects/project_thumbnails/phaser/bug-dodger.png");
+		//viewImageData(imageData);
+		int[][] trimmed = trimBorders(imageData,60);
+		twoDToImage(trimmed, "./trimmed_apple.jpg");
+		// int[][] allFilters = stretchHorizontally(shrinkVertically(colorFilter(negativeColor(trimBorders(invertImage(imageData), 50)), 200, 20, 40)));
+		// Painting with pixels
+	}
+	// Image Processing Methods
+	public static int[][] trimBorders(int[][] imageTwoD, int pixelCount) {
+		// Example Method
+		if (imageTwoD.length > pixelCount * 2 && imageTwoD[0].length > pixelCount * 2) {
+			int[][] trimmedImg = new int[imageTwoD.length - pixelCount * 2][imageTwoD[0].length - pixelCount * 2];
+			for (int i = 0; i < trimmedImg.length; i++) {
+				for (int j = 0; j < trimmedImg[i].length; j++) {
+					trimmedImg[i][j] = imageTwoD[i + pixelCount][j + pixelCount];
+				}
+			}
+			return trimmedImg;
+		} else {
+			System.out.println("Cannot trim that many pixels from the given image.");
+			return imageTwoD;
+		}
+	}
+	public static int[][] negativeColor(int[][] imageTwoD) {
+		// TODO: Fill in the code for this method
+    int[][]changeCol = new int[imageTwoD.length][imageTwoD[0].length];
+    for(int i =0; i < imageTwoD.length; i++) {
+    for(int j =0; j < imageTwoD[i].length; j++) {
+      int[] rgba = getRGBAFromPixel(imageTwoD[i][j]);
+      rgba[0] = 255 -rgba[0];
+      rgba[1] = 255 - rgba[1];
+      rgba[2] = 255 - rgba[2];
+      changeCol[i][j] = getColorIntValFromRGBA(rgba);
+    }  
+    }
+		return changeCol;
+		
+	}
+	public static int[][] stretchHorizontally(int[][] imageTwoD) {
+		// TODO: Fill in the code for this method
+    int [][]flatten = new int[imageTwoD.length][imageTwoD[0].length*2];
+    int position = 0;
+  for(int i =0; i < imageTwoD.length; i++) {
+  for(int j =0; j < imageTwoD[i].length; j++) {
+ position = j*2;
+ flatten[i][position] = imageTwoD[i][j];   
+ flatten[i][position+1] = imageTwoD[i][j];
+  }
+     }
+		return flatten;
+	}
+
+	public static int[][] shrinkVertically(int[][] imageTwoD) {
+		// TODO: Fill in the code for this method
+    int [][]shrink = new int[imageTwoD.length/2][imageTwoD[0].length];
+    for(int i =0; i < imageTwoD.length; i++) {
+  for(int j =0; j < imageTwoD[i].length-1; j+=2) {
+  shrink[j/2][i] = imageTwoD[j][i];  
+  }
+    }
+		return shrink;
+	}
+	public static int[][] invertImage(int[][] imageTwoD) {
+		// TODO: Fill in the code for this method
+       int [][]rev = new int[imageTwoD.length][imageTwoD[0].length];
+    for(int i =0; i < imageTwoD.length; i++) {
+  for(int j =0; j < imageTwoD[i].length; j++) {
+    rev[i][j] = imageTwoD[(imageTwoD.length-1)-i][(imageTwoD[i].length-1)-j];
+  }
+    }
+		return rev;
+	}
+	public static int[][] colorFilter(int[][] imageTwoD, int redChangeValue, int greenChangeValue, int blueChangeValue) {
+		// TODO: Fill in the code for this method
+     int [][]colFilt = new int[imageTwoD.length][imageTwoD[0].length];
+    for(int i =0; i < imageTwoD.length; i++) {
+  for(int j =0; j < imageTwoD[i].length; j++) {
+  int[] rgba = getRGBAFromPixel(imageTwoD[i][j]);
+   int newR = rgba[0] + redChangeValue;
+   int newG = rgba[1] + greenChangeValue;
+   int newB = rgba[2] + blueChangeValue;
+if(newR > 255){
+  newR = 255;
+}
+else if (newR < 0){
+ newR = 0;
+}    
+if(newG>255){
+  newG=255;
+}
+else if (newG<0){
+ newG =0;
+}    
+if(newB>255){
+ newB =255;
+}
+else if (newB<0){
+ newB =0;
+}  
+rgba[0] = newR;
+rgba[1] = newG;
+rgba[2] = newB;
+colFilt[i][j] = getColorIntValFromRGBA(rgba);
+  }
+    }
+		return colFilt;
+	}
+	// Painting Methods
+	public static int[][] paintRandomImage(int[][] canvas) {
+		// TODO: Fill in the code for this method
+    Random rand = new Random();
+  for(int i =0; i < canvas.length; i++) {
+  for(int j =0; j < canvas[i].length; j++) {
+     int[] rgba = { rand.nextInt(256), rand.nextInt(256), rand.nextInt(256), 255 };
+    
+   canvas[i][j] = getColorIntValFromRGBA(rgba);
+  }
+  }
+		return canvas;
+	}
+	public static int[][] paintRectangle(int[][] canvas, int width, int height, int rowPosition, int colPosition, int color) {
+		// TODO: Fill in the code for this method
+     for(int i =0; i < canvas.length; i++) {
+  for(int j =0; j < canvas[i].length; j++) {
+    if (i>=rowPosition && i <= rowPosition+width){
+      if(j>=colPosition && j<= rowPosition +height){
+        canvas[i][j] = color;
+      }
+    }
+  }
+     }
+		return canvas;
+	}
+	public static int[][] generateRectangles(int[][] canvas, int numRectangles) {
+		// TODO: Fill in the code for this method
+   Random rand = new Random();
+  for(int i =0; i < canvas.length; i++) {
+  for(int j =0; j < canvas[i].length; j++) {
+ int randomWidth = rand.nextInt(canvas[0].length);
+int randomHeight = rand.nextInt(canvas.length);
+
+int randomRow = rand.nextInt(canvas.length - randomHeight);
+int randomCol = rand.nextInt(canvas[0].length - randomWidth);
+int[] rgba = {rand.nextInt(26), rand.nextInt(56), rand.nextInt(6), 255};
+int randomColor = getColorIntValFromRGBA(rgba);
+canvas = paintRectangle(canvas, randomWidth, randomHeight, randomRow, randomCol, randomColor);
+  }
+  }
+		return canvas;
+  }
+	// Utility Methods
+	public static int[][] imgToTwoD(String inputFileOrLink) {
+		try {
+			BufferedImage image = null;
+			if (inputFileOrLink.substring(0, 4).toLowerCase().equals("http")) {
+				URL imageUrl = new URL(inputFileOrLink);
+				image = ImageIO.read(imageUrl);
+				if (image == null) {
+					System.out.println("Failed to get image from provided URL.");
+				}
+			} else {
+				image = ImageIO.read(new File(inputFileOrLink));
+			}
+			int imgRows = image.getHeight();
+			int imgCols = image.getWidth();
+			int[][] pixelData = new int[imgRows][imgCols];
+			for (int i = 0; i < imgRows; i++) {
+				for (int j = 0; j < imgCols; j++) {
+					pixelData[i][j] = image.getRGB(j, i);
+				}
+			}
+			return pixelData;
+		} catch (Exception e) {
+			System.out.println("Failed to load image: " + e.getLocalizedMessage());
+			return null;
+		}
+	}
+	public static void twoDToImage(int[][] imgData, String fileName) {
+		try {
+			int imgRows = imgData.length;
+			int imgCols = imgData[0].length;
+			BufferedImage result = new BufferedImage(imgCols, imgRows, BufferedImage.TYPE_INT_RGB);
+			for (int i = 0; i < imgRows; i++) {
+				for (int j = 0; j < imgCols; j++) {
+					result.setRGB(j, i, imgData[i][j]);
+				}
+			}
+			File output = new File(fileName);
+			ImageIO.write(result, "jpg", output);
+		} catch (Exception e) {
+			System.out.println("Failed to save image: " + e.getLocalizedMessage());
+		}
+	}
+	public static int[] getRGBAFromPixel(int pixelColorValue) {
+		Color pixelColor = new Color(pixelColorValue);
+		return new int[] { pixelColor.getRed(), pixelColor.getGreen(), pixelColor.getBlue(), pixelColor.getAlpha() };
+	}
+	public static int getColorIntValFromRGBA(int[] colorData) {
+		if (colorData.length == 4) {
+			Color color = new Color(colorData[0], colorData[1], colorData[2], colorData[3]);
+			return color.getRGB();
+		} else {
+			System.out.println("Incorrect number of elements in RGBA array.");
+			return -1;
+		}
+	}
+	public static void viewImageData(int[][] imageTwoD) {
+		if (imageTwoD.length > 3 && imageTwoD[0].length > 3) {
+			int[][] rawPixels = new int[3][3];
+			for (int i = 0; i < 3; i++) {
+				for (int j = 0; j < 3; j++) {
+					rawPixels[i][j] = imageTwoD[i][j];
+				}
+			}
+			System.out.println("Raw pixel data from the top left corner.");
+			System.out.print(Arrays.deepToString(rawPixels).replace("],", "],\n") + "\n");
+			int[][][] rgbPixels = new int[3][3][4];
+			for (int i = 0; i < 3; i++) {
+				for (int j = 0; j < 3; j++) {
+					rgbPixels[i][j] = getRGBAFromPixel(imageTwoD[i][j]);
+				}
+			}
+			System.out.println();
+			System.out.println("Extracted RGBA pixel data from top the left corner.");
+			for (int[][] row : rgbPixels) {
+				System.out.print(Arrays.deepToString(row) + System.lineSeparator());
+			}
+		} else {
+			System.out.println("The image is not large enough to extract 9 pixels from the top left corner");
+		}
+	}
+}
